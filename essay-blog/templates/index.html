@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>エッセイ一覧</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>エッセイ一覧</h1>
+    <a href="/new">新しいエッセイを書く</a>
+    <ul>
+        {% for essay in essays %}
+            <li><a href="/essay/{{ loop.index0 }}">{{ essay.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
